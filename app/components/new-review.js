@@ -1,26 +1,26 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  showReview: false,
+  showRating: false,
 
   actions: {
     show() {
-      if(this.get('showReview')) {
-        this.set('showReview', false);
+      if(this.get('showRating')) {
+        this.set('showRating', false);
       }else {
-      this.set('showReview', true);
+      this.set('showRating', true);
     }
   },
-    saveReview() {
-      console.log('running');
-      var reviewParams = {
+    saveRating() {
+      // console.log('running');
+      var ratingParams = {
       business: this.get('business'),
       stars: this.get('stars')
     };
-    console.log(reviewParams);
+    // console.log(ratingParams);
 
-      this.sendAction('saveReview', reviewParams);
-      console.log(reviewParams);
+      this.sendAction('saveRating', ratingParams);
+      // console.log(ratingParams);
     }
   }
 });

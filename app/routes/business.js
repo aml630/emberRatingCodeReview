@@ -1,20 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.findAll('business');
-    return this.store.findAll('reviews');
+  model(business) {
+    return this.store.findRecord('business', business.business_id);
   },
   actions: {
-    savebiz(attributes) {
-      console.log("running");
-      var newBusiness = this.store.createRecord('business', attributes);
-      newBusiness.save();
-      console.log(newBusiness);
-    },
-    deletebiz(business) {
-      business.destroyRecord();
-    },
     saveRating(reviewParams) {
       var newRating = this.store.createRecord('rating', reviewParams);
       console.log(newRating);
@@ -24,5 +14,5 @@ export default Ember.Route.extend({
         return business.save();
       });
   }
-  }
+}
 });

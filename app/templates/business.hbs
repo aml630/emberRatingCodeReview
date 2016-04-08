@@ -1,0 +1,8 @@
+<h3>{{model.name}}</h3>
+<img ref="{{model.image}}">
+<p>{{model.description}}</p>
+{{new-review business=model saveRating='saveRating'}}
+Number of reviews = {{model.ratings.length}}
+{{#each model.ratings as |rating|}}
+<p>{{rating.stars}}</p>
+{{/each}}
