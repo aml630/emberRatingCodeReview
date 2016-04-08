@@ -1,9 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  favoriteBiz: Ember.inject.service(),
+
   model() {
     return this.store.findAll('business');
-    return this.store.findAll('reviews');
   },
   actions: {
     savebiz(attributes) {
@@ -14,6 +15,9 @@ export default Ember.Route.extend({
     },
     deletebiz(business) {
       business.destroyRecord();
+    },
+    addToFavs(business) {
+      this.get('favoriteBiz').add(business);
     },
     saveRating(reviewParams) {
       var newRating = this.store.createRecord('rating', reviewParams);

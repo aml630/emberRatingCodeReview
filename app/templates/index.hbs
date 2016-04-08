@@ -5,9 +5,15 @@
 {{biz-tile model=business}}
 <button {{action "deletebiz" business}}>Delete</button>
 {{new-review business=business saveRating='saveRating'}}
-Reviews: {{business.ratings.length}}
+Reviews: {{business.ratings.length}}{{review-time business}}
 
-
+<button {{action 'addToFavs' business}}>Add To Favs</button>
 </div>
 
+
+{{/each}}
+
+Favorite businesses
+{{#each favoriteBiz.businesses as |fav|}}
+<p>Hey</p>
 {{/each}}

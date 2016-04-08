@@ -15,7 +15,8 @@ export default Ember.Component.extend({
       // console.log('running');
       var ratingParams = {
       business: this.get('business'),
-      stars: this.get('stars')
+      stars: this.get('stars'),
+      date: Date()
     };
     // console.log(ratingParams);
 

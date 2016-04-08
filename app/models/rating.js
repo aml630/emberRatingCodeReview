@@ -2,5 +2,6 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   stars: DS.attr(),
-    business: DS.belongsTo('business', {async:true}),
+  business: DS.belongsTo('business', {async:true}),
+  date: DS.attr()
 });
