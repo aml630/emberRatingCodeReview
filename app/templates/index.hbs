@@ -1,0 +1,10 @@
+{{new-business savebiz='savebiz'}}
+
+{{#each model as |business|}}
+<div class = "biztile">
+{{biz-tile model=business}}
+<button {{action "deletebiz" business}}>Delete</button>
+{{new-review}}
+</div>
+
+{{/each}}

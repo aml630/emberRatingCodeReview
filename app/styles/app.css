@@ -1,0 +1,8 @@
+.biztile {
+  border: solid 1px black;
+  width: 30%;
+  height: 150px;
+  margin: 10px;
+  float:left;
+  display: inline-block;
+}
