@@ -4,7 +4,7 @@
 {{new-review business=model saveRating='saveRating'}}
 Number of reviews = {{model.ratings.length}}
 {{#each model.ratings as |rating|}}
-<p>{{rating.stars}}</p>
+<p>{{rating.stars}}{{star-number rating.stars}}</p>
 Date: {{rating.date}}
 
 {{/each}}

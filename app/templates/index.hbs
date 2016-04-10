@@ -3,11 +3,11 @@
 {{#each model as |business|}}
 <div class = "biztile">
 {{biz-tile model=business}}
-<button {{action "deletebiz" business}}>Delete</button>
+<button class = "btn btn-danger" {{action "deletebiz" business}}>Delete</button>
 {{new-review business=business saveRating='saveRating'}}
 Reviews: {{business.ratings.length}}{{review-time business}}
 
-<button {{action 'addToFavs' business}}>Add To Favs</button>
+<button class = "btn btn-success"{{action 'addToFavs' business}}>Add To Favs</button>
 </div>
 
 

@@ -6,6 +6,9 @@ export default Ember.Component.extend({
   favoriteCount: Ember.computed('favoriteBiz.businesses.length', function () {
     return this.get('favoriteBiz').businesses.length;
   }),
+  favoriteList: Ember.computed('favoriteBiz.businesses', function () {
+    console.log("Fav list log "  + this.get('favoriteBiz.businesses'));
+  }),
 
   actions: {
     savebiz() {

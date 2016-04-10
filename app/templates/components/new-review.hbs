@@ -1,8 +1,14 @@
 
-<button {{action "show"}}>Leave Review</button>
+<button class= "btn btn-info" {{action "show"}}>Leave Review</button>
 {{#if showRating}}
 <form>
 {{input value=stars id="stars"}}
-<button {{action "saveRating"}}>Save</button>
+<!-- <select value = stars class="form-control" id="stars">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+</select> -->
+<button class = "btn btn-info"{{action "saveRating"}}>Save</button>
 </form>
 {{/if}}

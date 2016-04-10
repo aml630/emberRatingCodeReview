@@ -1,10 +1,11 @@
 <h2>Add a new business here</h2>
 
 <form>
-{{input value = name id = 'name'}}
-{{input value = image id = 'image'}}
-{{input value = description id = 'description'}}
-<button {{action  'savebiz'}}>Add a biz to the list</button>
+{{input value = name id = 'name' placeholder = "Business Name"}}
+{{input value = image id = 'image' placeholder = "Image/Logo"}}
+{{input value = description id = 'description' placeholder = "Business Description"}}
+<button class = "btn btn-info"{{action  'savebiz'}}>Add a biz to the list</button>
   </form>
 
 How many favorites you got?:  {{favoriteCount}}
+Favorite List: {{favoriteList}}
