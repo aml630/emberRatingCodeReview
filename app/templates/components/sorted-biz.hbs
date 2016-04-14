@@ -1,6 +1,4 @@
-{{new-business savebiz='savebiz'}}
-
-{{#each model as |business|}}
+{{#each sortedBusinesses as |business|}}
 <div class = "biztile">
 {{biz-tile model=business}}
 <button class = "btn btn-danger" {{action "deletebiz" business}}>Delete</button>
@@ -11,5 +9,3 @@ Reviews: {{business.ratings.length}}{{review-time business}}
 </div>
 
 {{/each}}
-
-<!-- {{sorted-biz model=model saveRating='saveRating' deletebiz="deletebiz"}} -->
